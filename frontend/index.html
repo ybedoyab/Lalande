@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" data-theme="dark" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lalande - Mars Colony Life Support Monitoring</title>
+    <script>
+      // Polyfill for 'global' variable used by some dependencies (e.g., react-graph-vis/uuid)
+      if (typeof global === 'undefined') {
+        var global = globalThis;
+      }
+      // Polyfill for 'process' variable used by MP React Components
+      if (typeof process === 'undefined') {
+        var process = {
+          env: {},
+          browser: true,
+          version: 'v18.0.0'
+        };
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
